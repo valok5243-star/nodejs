@@ -1,0 +1,18 @@
+color picker
+
+import React, { useState } from 'react';
+
+export default function App() {
+  const [color, setColor] = useState("#000000");
+
+  return (
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <input 
+        type="color" 
+        value={color} 
+        onChange={(e) => setColor(e.target.value)} 
+      />
+      <h2 style={{ color: color }}>Selected Color: {color}</h2>
+    </div>
+  );
+}

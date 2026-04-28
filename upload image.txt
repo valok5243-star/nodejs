@@ -1,0 +1,19 @@
+upload image
+
+import React, { useState } from 'react';
+
+export default function App() {
+  const [image, setImage] = useState(null);
+
+  const handleUpload = (e) => {
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
+
+  return (
+    <div>
+      <input type="file" onChange={handleUpload} />
+      <br />
+      {image && <img src={image} alt="preview" style={{ width: '200px', marginTop: '10px' }} />}
+    </div>
+  );
+}

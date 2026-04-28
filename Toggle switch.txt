@@ -1,0 +1,16 @@
+Toggle switch
+
+import React, { useState } from 'react';
+
+export default function App() {
+  const [isOn, setIsOn] = useState(false);
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <button onClick={() => setIsOn(!isOn)}>
+        {isOn ? "ON" : "OFF"}
+      </button>
+      {isOn && <p>The light is shining!</p>}
+    </div>
+  );
+}

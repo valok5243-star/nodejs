@@ -1,0 +1,15 @@
+Display list
+
+import React from 'react';
+
+export default function App() {
+  const fruits = ['Apple', 'Banana', 'Cherry', 'Dragonfruit'];
+
+  return (
+    <ul>
+      {fruits.map((fruit, index) => (
+        <li key={index}>{fruit}</li>
+      ))}
+    </ul>
+  );
+}
