@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+function validateLogin() {
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u == "" || p == "") {
+        alert("All fields are required");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+
+<body>
+<h2>Login</h2>
+
+<form onsubmit="return validateLogin()">
+    <input type="text" id="user" placeholder="Username"><br>
+    <input type="password" id="pass" placeholder="Password"><br>
+    <button type="submit">Login</button>
+</form>
+
+</body>
+</html>

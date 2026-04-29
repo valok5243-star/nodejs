@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+function validateRegister() {
+    var n = document.getElementById("name").value;
+    var e = document.getElementById("email").value;
+    var p = document.getElementById("pass").value;
+
+    if (n == "" || e == "" || p == "") {
+        alert("All fields are required");
+        return false;
+    }
+
+    if (!e.includes("@")) {
+        alert("Enter valid email");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+
+<body>
+<h2>Registration</h2>
+
+<form onsubmit="return validateRegister()">
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="pass" placeholder="Password"><br>
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
