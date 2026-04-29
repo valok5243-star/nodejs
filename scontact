@@ -1,0 +1,6 @@
+<form onsubmit="return contact()">
+    <textarea id="msg" placeholder="Message"></textarea><br>
+    <button type="submit">Send</button>
+</form>
+
+<script src="app.js"></script>

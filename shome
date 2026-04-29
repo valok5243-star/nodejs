@@ -1,0 +1,5 @@
+<body onload="loadHome()">
+<h2>Home Page</h2>
+
+<script src="app.js"></script>
+</body>
